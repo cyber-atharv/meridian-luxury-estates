@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/asset";
 /** Merge class names, filtering falsy values */
 export function cn(...classes: (string | undefined | null | false | 0)[]): string {
   return classes.filter(Boolean).join(" ");
@@ -31,17 +32,17 @@ export function zeroPad(n: number, width: number): string {
  */
 export function frameSrc(index: number): string {
   // %20 encodes the space in "frames 1" — works in both browsers and Node Image()
-  return `/frames%201/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`;
+  return assetUrl(`/frames%201/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`);
 }
 
 /** Src builder for the second sequence — public/frames/ (no space), 180 frames */
 export function frameSrc2(index: number): string {
-  return `/frames/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`;
+  return assetUrl(`/frames/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`);
 }
 
 /** Src builder for the third sequence — public/frames 2/ (space → %20), 114 frames */
 export function frameSrc3(index: number): string {
-  return `/frames%202/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`;
+  return assetUrl(`/frames%202/ezgif-frame-${zeroPad(index + 1, 3)}.jpg`);
 }
 
 /** Check if the user prefers reduced motion */

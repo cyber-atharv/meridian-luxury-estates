@@ -1,5 +1,5 @@
 {
-  "name": "meridian-dev",
+  "name": "meridian-luxury-estates",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -28,5 +28,6 @@
     "playwright": "^1.61.1",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "description": "Meridian Luxury Beachfront Real Estate Showcase"
 }

@@ -1,91 +1,63 @@
-# Meridian Development Group — Website
+# Meridian Luxury Coastal Estates
 
-Premium beachfront real estate showcase built with Next.js 16, GSAP, Framer Motion, and Lenis.
+> A high-end, cinematic beachfront real estate showcase built with Next.js 16, GSAP ScrollTrigger canvas sequences, Framer Motion, and Lenis smooth scrolling.
 
-## Quick Start
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)](https://cyber-atharv.github.io/meridian-luxury-estates/)
+[![Author](https://img.shields.io/badge/Author-Atharv%20Hogade-blue?style=for-the-badge)](https://github.com/cyber-atharv)
+
+---
+
+## 🏖️ Live Deployment
+
+Experience the interactive luxury architectural showcase:
+👉 **[https://cyber-atharv.github.io/meridian-luxury-estates/](https://cyber-atharv.github.io/meridian-luxury-estates/)**
+
+---
+
+## ✨ Features
+
+- **Multi-Scene Scroll-Pinned Canvas Sequences**: Over 500 frames of ultra-smooth architectural visual sequences synchronized with GSAP ScrollTrigger.
+- **Dynamic Architectural Project Galleries**: Interactive horizontal scroll showcase, expandable details, and high-resolution renders.
+- **Cinematic Film Grain & Typography**: Tailored typography (Playfair Display + Inter) with subtle film grain shaders and kinetic text reveals.
+- **Smooth Momentum Scrolling**: Integrated Lenis scroll engine for fluid desktop and trackpad interactions.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 App Router (Static Export)
+- **Scroll & Animations**: GSAP, ScrollTrigger, Framer Motion, Lenis
+- **Styling**: Tailwind CSS v4
+- **Image Sequences**: Custom HTML5 Canvas sequence pipeline
+
+---
+
+## 🚀 Getting Started
 
 ```bash
-cd meridian-dev
+# Clone the repository
+git clone https://github.com/cyber-atharv/meridian-luxury-estates.git
+
+# Navigate into project directory
+cd meridian-luxury-estates
+
+# Install dependencies
 npm install
+
+# Run local development server
 npm run dev
-# → http://localhost:3000
 ```
 
-## Project Structure
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```
-src/
-├── app/
-│   ├── globals.css          # Design tokens (Tailwind v4), film grain, form styles
-│   ├── layout.tsx           # Fonts (Playfair Display + Inter), metadata
-│   └── page.tsx             # Page assembly + Lenis init
-│
-├── hooks/
-│   ├── useImageSequence.ts  ★ Canvas frame sequence hook — swap your frames here
-│   ├── useLenis.ts          # Smooth scroll + GSAP sync
-│   └── useScrollReveal.ts   # Reusable scroll-triggered reveal
-│
-├── lib/
-│   ├── constants.ts         # All site content (projects, stats, copy)
-│   └── utils.ts             # frameSrc(), cn(), clamp(), mapRange()
-│
-├── components/
-│   ├── layout/
-│   │   └── Navigation.tsx   # Fixed nav + fullscreen slide-in menu
-│   ├── ui/
-│   │   ├── Preloader.tsx    # Frame-loading progress screen
-│   │   ├── GrainOverlay.tsx # Film grain (CSS animation)
-│   │   └── ScrollReveal.tsx # Scroll-triggered fade/rise wrapper
-│   └── sections/
-│       ├── HeroSection.tsx       # ★ Canvas hero with image sequence
-│       ├── AboutSection.tsx      # Scroll-pinned manifesto word reveal
-│       ├── ProjectsSection.tsx   # Horizontal scroll gallery + detail modal
-│       ├── ProcessSection.tsx    # Pinned horizontal timeline
-│       ├── StatsSection.tsx      # Count-up numbers
-│       ├── TestimonialSection.tsx# Full-bleed quote
-│       └── ContactSection.tsx    # Inquiry form + footer
-│
-public/
-├── frames 1/               ★ YOUR 300 FRAMES (already present)
-│   ├── ezgif-frame-001.jpg
-│   └── … ezgif-frame-300.jpg
-└── images/
-    ├── projects/           # project-1.jpg … project-5.jpg
-    ├── process/            # process-1.jpg … process-6.jpg
-    └── testimonial.jpg     # Full-bleed quote background
-```
+---
 
-## Swapping the Hero Frame Sequence
+## 👨‍💻 Author
 
-Your 300 frames are already in `public/frames 1/` named `ezgif-frame-001.jpg` → `ezgif-frame-300.jpg`.
+**Atharv Hogade**
+- **GitHub**: [@cyber-atharv](https://github.com/cyber-atharv)
+- **Email**: [atharvhogade12@gmail.com](mailto:atharvhogade12@gmail.com)
 
-If you ever swap to a different sequence:
-1. Drop the new frames into `public/frames 1/` with the same naming
-2. If the frame count changes, update `FRAME_COUNT = 300` in `src/components/sections/HeroSection.tsx`
-3. If the naming pattern changes, update `frameSrc()` in `src/lib/utils.ts`
+---
 
-## Adding Project Images
-
-Place images in `public/images/projects/` named `project-1.jpg` through `project-5.jpg`.
-Process section images go in `public/images/process/` as `process-1.jpg` through `process-6.jpg`.
-
-## Editing Site Content
-
-All text, project data, stats, and testimonials live in one file: **`src/lib/constants.ts`**
-
-- `PROJECTS` — project objects (name, location, year, features, images)
-- `STATS` — the four count-up numbers
-- `TESTIMONIAL` — the pull-quote and author
-- `HERO_PHRASES` — kinetic text tied to scroll progress ranges (0–1)
-- `SITE` — name, address, phone, email
-
-## Tech Stack
-
-| Layer | Library |
-|-------|---------|
-| Framework | Next.js 16 App Router |
-| Styling | Tailwind CSS v4 |
-| Scroll animations | GSAP + ScrollTrigger |
-| Component animations | Framer Motion |
-| Smooth scroll | Lenis |
-| Canvas hero | Custom `useImageSequence` hook |
+*Licensed under the MIT License.*

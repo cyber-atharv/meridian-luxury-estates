@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/asset";
 // ─── Site-wide constants ────────────────────────────────────────────────────
 
 export const SITE = {
@@ -42,11 +43,11 @@ export const PROJECTS: Project[] = [
     type: "Beachfront Residences",
     units: "24 Units",
     area: "4,200 – 6,800 sq ft",
-    image: "/images/projects/project-1.jpg",
+    image: assetUrl("/images/projects/project-1.jpg"),
     galleryImages: [
-      "/images/projects/project-1.jpg",
-      "/images/projects/project-1b.jpg",
-      "/images/projects/project-1c.jpg",
+      assetUrl("/images/projects/project-1.jpg"),
+      assetUrl("/images/projects/project-1b.jpg"),
+      assetUrl("/images/projects/project-1c.jpg"),
     ],
     description:
       "A collection of 24 ultra-luxury beachfront residences perched above Malibu's most coveted stretch of coastline. Each home is a study in restraint — raw concrete and warm timber meeting the Pacific horizon.",
@@ -66,10 +67,10 @@ export const PROJECTS: Project[] = [
     type: "Clifftop Villas",
     units: "12 Villas",
     area: "5,500 – 9,200 sq ft",
-    image: "/images/projects/project-2.jpg",
+    image: assetUrl("/images/projects/project-2.jpg"),
     galleryImages: [
-      "/images/projects/project-2.jpg",
-      "/images/projects/project-2b.jpg",
+      assetUrl("/images/projects/project-2.jpg"),
+      assetUrl("/images/projects/project-2b.jpg"),
     ],
     description:
       "Twelve singular villas carved into the Santa Ynez foothills, each commanding 270-degree views across the Pacific. Mediterranean influences meet California modernism in every detail.",
@@ -89,8 +90,8 @@ export const PROJECTS: Project[] = [
     type: "Urban Coastal",
     units: "48 Units",
     area: "2,800 – 4,100 sq ft",
-    image: "/images/projects/project-3.jpg",
-    galleryImages: ["/images/projects/project-3.jpg"],
+    image: assetUrl("/images/projects/project-3.jpg"),
+    galleryImages: [assetUrl("/images/projects/project-3.jpg")],
     description:
       "An urban coastal landmark — 48 residences woven into the Manhattan Beach strand. Interiors designed by Clément Courtin balance warmth with precision across every finish.",
     features: [
@@ -109,8 +110,8 @@ export const PROJECTS: Project[] = [
     type: "Headland Estate",
     units: "8 Estates",
     area: "7,000 – 12,000 sq ft",
-    image: "/images/projects/project-4.jpg",
-    galleryImages: ["/images/projects/project-4.jpg"],
+    image: assetUrl("/images/projects/project-4.jpg"),
+    galleryImages: [assetUrl("/images/projects/project-4.jpg")],
     description:
       "Eight estate residences at the point where land surrenders to sea. Designed by Studio Farallon, these homes are a dialogue between raw California geology and precise architectural craft.",
     features: [
@@ -129,8 +130,8 @@ export const PROJECTS: Project[] = [
     type: "Waterfront Terrace Homes",
     units: "32 Units",
     area: "3,200 – 5,600 sq ft",
-    image: "/images/projects/project-5.jpg",
-    galleryImages: ["/images/projects/project-5.jpg"],
+    image: assetUrl("/images/projects/project-5.jpg"),
+    galleryImages: [assetUrl("/images/projects/project-5.jpg")],
     description:
       "Thirty-two terrace homes arranged in cascading tiers above Coronado Bay, each with uninterrupted water views and private outdoor spaces that dissolve the boundary between inside and out.",
     features: [
@@ -151,7 +152,7 @@ export const PROCESS_STEPS = [
     subtitle: "Site Selection",
     description:
       "We identify parcels with irreplaceable natural attributes — the exact angle of morning light, the way a headland holds the wind.",
-    image: "/images/process/process-1.jpg",
+    image: assetUrl("/images/process/process-1.jpg"),
   },
   {
     stage: "02",
@@ -159,7 +160,7 @@ export const PROCESS_STEPS = [
     subtitle: "Engineering",
     description:
       "Below grade, everything is overbuilt. Concrete, piling, and structure designed to last centuries on some of the world's most demanding coastline.",
-    image: "/images/process/process-2.jpg",
+    image: assetUrl("/images/process/process-2.jpg"),
   },
   {
     stage: "03",
@@ -167,7 +168,7 @@ export const PROCESS_STEPS = [
     subtitle: "Build",
     description:
       "Our master-build team holds tolerances that luxury joinery demands. We bring the architect's vision off the page with obsessive precision.",
-    image: "/images/process/process-3.jpg",
+    image: assetUrl("/images/process/process-3.jpg"),
   },
   {
     stage: "04",
@@ -175,7 +176,7 @@ export const PROCESS_STEPS = [
     subtitle: "Envelope",
     description:
       "Each facade is tuned to its environment — thermal mass, weather resistance, and the quality of light that enters every room.",
-    image: "/images/process/process-4.jpg",
+    image: assetUrl("/images/process/process-4.jpg"),
   },
   {
     stage: "05",
@@ -183,7 +184,7 @@ export const PROCESS_STEPS = [
     subtitle: "Finish",
     description:
       "We collaborate with the world's finest interior studios. Every surface, threshold, and fitting is chosen for its ability to age beautifully.",
-    image: "/images/process/process-5.jpg",
+    image: assetUrl("/images/process/process-5.jpg"),
   },
   {
     stage: "06",
@@ -191,7 +192,7 @@ export const PROCESS_STEPS = [
     subtitle: "Delivery",
     description:
       "Our relationship with each homeowner doesn't end at settlement. We stand behind every Meridian home — for as long as it stands.",
-    image: "/images/process/process-6.jpg",
+    image: assetUrl("/images/process/process-6.jpg"),
   },
 ];
 
@@ -209,7 +210,7 @@ export const TESTIMONIAL = {
     "Meridian didn't build us a house. They gave us a place the family will fight over for generations.",
   author: "James & Catherine Whitmore",
   location: "Cape Meridian, Malibu",
-  image: "/images/testimonial.jpg",
+  image: assetUrl("/images/testimonial.jpg"),
 };
 
 // ─── Navigation links ────────────────────────────────────────────────────────
